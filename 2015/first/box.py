@@ -1,0 +1,13 @@
+import turtle
+s=turtle.Screen()
+t=turtle.Turtle ()
+t.dot(15,'yellow')
+t.forward(40)
+t.dot(15,'red')
+t.left (90)
+t.forward(40)
+t.dot(15,'blue')
+t.left (90)
+t.forward(40)
+t.dot(15,'lime green')
+t.goto(0,0)

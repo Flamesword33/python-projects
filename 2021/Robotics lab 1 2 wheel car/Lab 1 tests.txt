@@ -1,0 +1,127 @@
+2. Straight line	
+	test num	problems encounetered
+	3		machine touched mid use
+	8		machine corrected heading at end using disk drive
+
+Place robot in starting position
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+100, 0, 0
+How far did the robot travel in cm? 97.25
+How far did the robot rotate in cm? 0.5
+Power  10 - Actual Distance traveled: 97.25  Error: 2.75 - Encoder Distance traveled 36015.0  Error: 35915.0
+Power  10 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 0.295
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+200, 0, 0
+How far did the robot travel in cm? 97
+How far did the robot rotate in cm? 2.5
+Power  20 - Actual Distance traveled: 97.0  Error: 3.0 - Encoder Distance traveled 36015.0  Error: 35915.0
+Power  20 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 1.48
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+300, 0, 0
+How far did the robot travel in cm? 97.5
+How far did the robot rotate in cm? -.5
+Power  30 - Actual Distance traveled: 97.5  Error: 2.5 - Encoder Distance traveled 35997.5  Error: 35897.5
+Power  30 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: -0.294
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+400, 0, 0
+How far did the robot travel in cm? 97.5
+How far did the robot rotate in cm? 16.5
+Power  40 - Actual Distance traveled: 97.5  Error: 2.5 - Encoder Distance traveled 36163.75  Error: 36063.75
+Power  40 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 9.61
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+500, 0, 0
+How far did the robot travel in cm? 97.5
+How far did the robot rotate in cm? 16.5
+Power  50 - Actual Distance traveled: 97.5  Error: 2.5 - Encoder Distance traveled 36128.75  Error: 36028.75
+Power  50 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 9.61
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+600, 0, 0
+How far did the robot travel in cm? 95.5
+How far did the robot rotate in cm? 12.5
+Power  60 - Actual Distance traveled: 95.5  Error: 4.5 - Encoder Distance traveled 36312.5  Error: 36212.5
+Power  60 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 7.46
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+700, 0, 0
+How far did the robot travel in cm? 11
+How far did the robot rotate in cm? 11
+Power  70 - Actual Distance traveled: 11.0  Error: 89.0 - Encoder Distance traveled 36128.75  Error: 36028.75
+Power  70 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 45
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+800, 0, 0
+How far did the robot travel in cm? 95
+How far did the robot rotate in cm? 21
+Power  80 - Actual Distance traveled: 95.0  Error: 5.0 - Encoder Distance traveled 36137.5  Error: 36037.5
+Power  80 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 12.5
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+900, 0, 0
+How far did the robot travel in cm? 95
+How far did the robot rotate in cm? 16
+Power  90 - Actual Distance traveled: 95.0  Error: 5.0 - Encoder Distance traveled 36120.0  Error: 36020.0
+Power  90 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 9.56
+Continue?
+----- Did Action [ Line for length 100 at heading 0.0 ]-----
+1000, 0, 0
+How far did the robot travel in cm? 93.5
+How far did the robot rotate in cm? 18.5
+Power 100 - Actual Distance traveled: 93.5  Error: 6.5 - Encoder Distance traveled 36120.0  Error: 36020.0
+Power 100 - Start Heading: 0.0 End Heading: 0.0 Gyro Diff: 0.0 Measured Diff: 11.2
+Continue?
+
+CIRCLE
+----- Did Action [ Rotates 6.283185307179586 degrees CW True from initial heading 0.0 ]-----
+0, 0, -360
+How many degrees was the rotation off? 0
+Power  10 - Start Heading:  0 End Heading: 355 Gyro Diff:  5 Measured Diff: 0
+----- Did Action [ Rotates 6.283185307179586 degrees CW True from initial heading -6.283185307179586 ]-----
+0, 0, -720
+How many degrees was the rotation off? 5
+Power  30 - Start Heading:  0 End Heading: 357 Gyro Diff:  3 Measured Diff: 5
+----- Did Action [ Rotates 6.283185307179586 degrees CW True from initial heading -12.566370614359172 ]-----
+0, 0, -1080
+How many degrees was the rotation off? 0
+Power  50 - Start Heading:  0 End Heading: 358 Gyro Diff:  2 Measured Diff: 0
+----- Did Action [ Rotates 6.283185307179586 degrees CW True from initial heading -18.84955592153876 ]-----
+0, 0, -1440
+How many degrees was the rotation off? 22
+Power  70 - Start Heading:  0 End Heading: 351 Gyro Diff:  9 Measured Diff: 22
+----- Did Action [ Rotates 6.283185307179586 degrees CW True from initial heading -25.132741228718345 ]-----
+0, 0, -1800
+How many degrees was the rotation off? 10
+Power  90 - Start Heading:  0 End Heading: 347 Gyro Diff: 13 Measured Diff: 10
+
+
+3.RECTANGLE
+	test num 	position		distance (cm)
+	1		Virtual [0, 0, -355]	30  , 10
+			Real    [0, 0,    1]	28.5, 9 
+ 	2		Virtual [0, 0, -354]    30  , 10
+			Real    [1, 1,    4]	29.5, 9.5
+	3		Virtual [0, 0, -354]	30  , 10
+			Real    [.5,0,  2.5]	29  , 9.2
+  LEMNISCATE(radius 8)	angle			diameter
+	1		Virtual -2		16
+			Real     0 		17
+	2		Virtual -3		16
+			Real	-2 		17.2
+	3		Virtual -4		16
+			Real	-4		17.5
+
+4.
+Dead recokoning
+
+1. Virtual [49.7, -34.8,10.3]
+   Real	   [68  , -33  , 25 ]
+2. Virtual [49.5, -34.3, 1.6]
+   Real    [76  , -39  , 30 ] --took a few tries, pencil dug into ground and then wheel slipped causing machine
+				to fail to spin
+3. Virtual [50.9, -34.7, 2.8]
+   Real    [72  , -10  , 45 ]
+

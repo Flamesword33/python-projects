@@ -1,0 +1,16 @@
+Bird, Big 78 42 76 75 80
+Bear, Jasper 81 80 81 81 83 82
+Bunny, Bugs 34 56 67 58 72
+Claus, Santa 43 70 56 84 62 73
+Duck, Donald 68 74 84 78 55 81
+Flintstone, Fred 50 49 52 53 50 54
+Frog, Kermit 90 87 92 93 88 82
+Goose, Canada 86 88 82 79 81 93
+Lot, Missa 73 57 62
+Mermaid, Ariel 62 67 79 72 80 68
+Monster, Cookie 70 70 80 60 80 60
+Mouse, Minnie 98 100 95 87 93 93
+Ranger, Lone 84 85 78 81 82 79
+Snowman, Frosty 90 57 84 85 65 72
+White, Snow 73 75 74 69 53 84
+Woodpecker, Woody 73 72 75 70 81 68

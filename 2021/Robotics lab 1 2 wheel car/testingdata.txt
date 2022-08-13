@@ -1,0 +1,32 @@
+Straight line 
+
+Tests are ruler from line on floor and angle from gyro sensor
+first test 
+GYrO 2492
+GYRO 2505
+3cm to the right
+
+second test
+GYrO 2895
+GYRO 2906
+2mm to the right
+
+third test
+GYrO 3227
+GYRO 3240
+14 mm to the right
+
+
+TRY #2 at straight line
+
+engine %	ruler(mm)	gyro(degrees)	distance traveled
+10		1		0		
+20		4		1		
+30		6		2		
+40		3		0		
+50		4		1		
+60		-4		0		
+70		9		1		
+80		-40		-2		
+90		-95		-7		
+100		-100		-9		
