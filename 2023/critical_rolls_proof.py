@@ -1,5 +1,5 @@
 #critical_rolls_proof.py
-#by Nathan Pelltier
+#by Nathan Pelletier
 #started November 21, 2023
 
 # This project was originally to win an argument.
@@ -30,58 +30,64 @@ def main():
     ac_without_crit = []
     ac_with_crit = []
 
-    for dc in range(0, 21):
-        dc_without_crit.append(roll_dc_without_crit(dc))
-        dc_with_crit.append(roll_dc_with_crit(dc))
+    for dc in range(0, 22):
+        dc_without_crit.append(roll_dc_without_crit(dc)/14)
+        dc_with_crit.append(roll_dc_with_crit(dc)/14)
 
-    for ac in range(21, 0, -1):
-        ac_without_crit.append(roll_ac_without_crit(ac))
-        ac_with_crit.append(roll_ac_with_crit(ac))
+        ac_without_crit.append(roll_ac_without_crit(dc)/14)
+        ac_with_crit.append(roll_ac_with_crit(dc)/14)
         
-    analyze_dc(dc_without_crit, dc_with_crit)
-    analyze_ac(ac_without_crit, ac_with_crit)
+    analyze(dc_without_crit, dc_with_crit, ac_without_crit, ac_with_crit)
 
-
+#roll < dc --> take dmg
+#roll >= dc --> 1/2 dmg
 def roll_dc_without_crit(dc):
     damage = 0
-    for roll in range(1,20):
+    for roll in range(1,21):
         if roll < dc:
             damage = damage + 14
         else:
             damage = damage + 7
     return damage
 
+#1 is 2x dmg
+#20 is a miss
+#roll < dc --> take dmg
+#roll >= dc --> 1/2 dmg
 def roll_dc_with_crit(dc):
     damage = 0
     for roll in range(1,20):
         if roll == 1:
             damage = damage + 28
-        elif roll == 20:
-            pass
         elif roll < dc:
             damage = damage + 14
         elif roll >= dc:
             damage = damage + 7
     return damage
 
+#any roll >= AC --> hit
 def roll_ac_without_crit(ac):
     damage = 0
-    for roll in range(1,20):
+    for roll in range(1,21):
         if roll >= ac:
             damage = damage + 14
     return damage
 
+#1 is a miss
+#20 is a hit for 2x dmg
+#any roll >= AC --> hit
 def roll_ac_with_crit(ac):
     damage = 0
-    for roll in range(1,20):
+    for roll in range(2,21):
         if roll == 20:
             damage = damage + 28
-        elif roll >= ac and roll > 1:
+        elif roll >= ac and roll != 20:
             damage = damage + 14
     return damage
 
-def analyze_dc(without_crit, with_crit):
-    pass
-
-def analyze_ac(without_crit, with_crit):
-    pass
+def analyze(dc_without_crit, dc_with_crit, ac_without_crit, ac_with_crit):
+    print ("          dc without  dc with  ac without  ac with")
+    for x in range(len(dc_with_crit)):
+        print ("Pass ", x, " ", dc_without_crit[x], "       ", dc_with_crit[x], "    ", ac_without_crit[21-x], "         ", ac_with_crit[21-x])
+   
+main()
