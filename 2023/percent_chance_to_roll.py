@@ -36,4 +36,11 @@ def multi_roll(how_many = 1, face_count = 20, modifiyer = 0,num_to_beat = 10):
     print(fails, " fails")
     print(crits, " crits")
 
+def percent_roll(number_of_rolls = 10000):
+    # Remember roll is offset starting its index at 0-19
+    #             1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+    roll_tally = [0,0,0,0,0,0,0,0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    current_roll = 0
+    return roll_tally
+
 main()
