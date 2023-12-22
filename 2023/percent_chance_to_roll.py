@@ -46,6 +46,10 @@ def percent_roll(number_of_rolls = 10000):
         #2 ways to proceed, simply enter if statement for each number from 1 to 20... im an idot
         roll_tally[current_roll-1] = roll_tally[current_roll-1] + 1
     
+    for x in range(len(roll_tally)):
+        roll_tally[x] = roll_tally[x]/number_of_rolls
+        print (roll_tally[x])
+    
     return roll_tally
 
 main()
