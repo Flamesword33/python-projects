@@ -1,3 +1,12 @@
+#percent_chance_to_roll.py
+#by Nathan Pelletier
+#started December 21
+
+#This is to help with mass combat rolls (seriously 10+ rolls makes any table top game slow)
+#I expect each roll to have a 1/20 chance to come up so I expect the final formula to be 
+#   number_of_rolls * 1/20 * (20 + attack modifier - AC)/100
+#   number_of_rolls *(20 + attack modifier - AC)/2000
+
 
 import random
 
