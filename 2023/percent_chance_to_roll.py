@@ -7,10 +7,13 @@
 #   number_of_rolls * 1/20 * (20 + attack modifier - AC)/100
 #   number_of_rolls *(20 + attack modifier - AC)/2000
 
+#   Yup key result was what I expected although with less rolls the average for each became more sparatic 
+
 
 import random
 
 def main():
+    percent_roll()
     
 
 def roll(how_many = 1, face_count = 20):
