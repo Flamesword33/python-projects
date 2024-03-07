@@ -31,6 +31,19 @@ class Character:
 class Monk(Character):
     def _init__(self, level, ability):
         self.ki = level
+        if self.ki == 1:
+            self.ki = 0
+
+        if self.level < 5:
+            self.martialDice = 4
+        elif self.level < 11:
+            self.martialDice = 6
+        elif self.level < 17:
+            self.martialDice = 8
+        else:
+            self.martialDice = 10
+
+        return super()._init__(level, ability)
 class Rogue(Character):
     def _init__(self, level, ability):
         self.isSneak = True
