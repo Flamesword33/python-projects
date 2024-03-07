@@ -28,6 +28,10 @@ class Character:
     def roll(dice):
         return randint(1, dice)
     
+#monk assumptions:
+#  offhand attacks get ability modifier to damage unlike every other class
+#  They are weilding a greatclub or quarterstaff with 2 hands, giving them d8 attack
+#  Every turn they take Flurry of Blows if able
 class Monk(Character):
     def _init__(self, level, ability):
         self.ki = level
@@ -44,6 +48,9 @@ class Monk(Character):
             self.martialDice = 10
 
         return super()._init__(level, ability)
+#Rogue assumptions:
+#  They are always able to activate sneak attack via hitting targets next to allies
+#  They are dual weilding short swords to maximize damage and # of attacks a turn at d6
 class Rogue(Character):
     def _init__(self, level, ability):
         self.isSneak = True
