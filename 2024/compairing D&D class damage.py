@@ -42,9 +42,10 @@ class Character:
 class Monk(Character):
     def _init__(self, level, ability):
         self.ki = level
+        #level 1 monks lack ki
         if self.ki == 1:
             self.ki = 0
-
+        #1-4--> d4, 5-10 --> d6, 11-16 --> d8, 17-20 --> d10
         if self.level < 5:
             self.martialDice = 4
         elif self.level < 11:
