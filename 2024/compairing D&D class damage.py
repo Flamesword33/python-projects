@@ -76,3 +76,8 @@ class Rogue(Character):
         if damage > 0:
             damage += self.sneakAttack()
         return damage
+    def sneakAttack(self):
+        damage = 0
+        for i in range(self.numOfSneakDice):
+            damage += self.roll(6)
+        return damage
