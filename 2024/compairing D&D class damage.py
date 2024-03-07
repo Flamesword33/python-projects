@@ -35,6 +35,13 @@ class Character:
     #end roll
 #end Character
     
+class Barbarian(Character):
+    pass
+
+class Fighter(Character):
+    pass
+
+
 #monk assumptions:
 #  offhand attacks get ability modifier to damage unlike every other class
 #  They are weilding a greatclub or quarterstaff with 2 hands, giving them d8 attack
@@ -73,6 +80,15 @@ class Monk(Character):
     #end turn
 #end Monk
     
+
+class Paladin(Character):
+    pass
+
+class Ranger(Character):
+    pass
+
+class NewRanger(Character):
+    pass
 
 #Rogue assumptions:
 #  They are always able to activate sneak attack via hitting targets next to allies
