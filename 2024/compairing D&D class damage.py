@@ -20,10 +20,12 @@ class Character:
     def attack(self, AC, dmgDice):
         if (self.roll(20) + self.ability + self.proficency) >= AC:
             return self.roll(dmgDice) + self.ability
+        return 0
         
     def offHandAttack(self, AC, dmgDice):
         if (self.roll(20) + self.ability + self.proficency) >= AC:
             return self.roll(dmgDice)
+        return 0
         
     def roll(dice):
         return randint(1, dice)
