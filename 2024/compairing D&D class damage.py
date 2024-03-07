@@ -48,6 +48,19 @@ class Monk(Character):
             self.martialDice = 10
 
         return super()._init__(level, ability)
+    def turn(self, AC):
+        damage = 0
+        mainHand = 8
+        if mainHand < self.martialDice:
+            mainHand == self.martialDice
+        damage += self.attack(AC, mainHand)
+        damage += self.attack(AC, self.martialDice)
+        if self.ki > 0:
+            damage += self.attack(AC, self.martialDice)
+            self.ki -= 1
+        if self.level > 4:
+            damage += self.attack(AC, mainHand)
+        return damage
 #Rogue assumptions:
 #  They are always able to activate sneak attack via hitting targets next to allies
 #  They are dual weilding short swords to maximize damage and # of attacks a turn at d6
