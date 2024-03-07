@@ -4,7 +4,13 @@
 
     Original idea by Peter Lewis
     Said program simulates each of D&D 5e's base classes 
-  
+    In said sim the program will test:
+      AC from 1-30
+      Levels 1-20
+    Users can control: 
+      how many rounds combat takes
+      A given characters ability modifier
+      which fighter is tested
 """
 
 
