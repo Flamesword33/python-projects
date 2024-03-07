@@ -69,3 +69,10 @@ class Rogue(Character):
         self.isSneak = True
         self.numOfSneakDice = ceil(level/2)
         return super()._init__(level, ability)
+    def turn(self, AC):
+        damage = 0
+        damage += self.attack(AC, 6)
+        damage += self.offHandAttack(AC, 6)
+        if damage > 0:
+            damage += self.sneakAttack()
+        return damage
