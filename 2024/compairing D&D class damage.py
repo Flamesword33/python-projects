@@ -24,6 +24,10 @@ class Character:
     def offHandAttack(self, AC, dmgDice):
         if (self.roll(20) + self.ability + self.proficency) >= AC:
             return self.roll(dmgDice)
+        
+    def roll(dice):
+        return randint(1, dice)
+    
 class Monk(Character):
     def _init__(self, level, ability):
         self.ki = level
