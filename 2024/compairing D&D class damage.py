@@ -18,9 +18,11 @@ from math import ceil
 from random import randint
 
 class Character:
-    def _init__(self, level, ability):
+    def _init__(self, level, ability, weapon, offHandWeapon):
         self.level = level
         self.ability = ability
+        self.weapon = weapon
+        self.offHandWeapon = offHandWeapon
         self.proficency = ceil(level/4) + 1
     #end _init__
 
@@ -50,11 +52,14 @@ class Fighter(Character):
 
 #monk assumptions:
 #  offhand attacks get ability modifier to damage unlike every other class
-#  They are weilding a greatclub or quarterstaff with 2 hands, giving them d8 attack
 #  Every turn they take Flurry of Blows if able
 class Monk(Character):
-    def _init__(self, level, ability):
+    def _init__(self, level, ability, weapon, offhand):
         self.ki = level
+        self.level = level
+        self.ability = ability
+        self.weapon = weapon
+
         #level 1 monks lack ki
         if self.ki == 1:
             self.ki = 0
@@ -67,21 +72,19 @@ class Monk(Character):
             self.martialDice = 8
         else:
             self.martialDice = 10
-        return super()._init__(level, ability)
+        if self.weapon < self.martialDice:
+            self.weapon = self.martialDice
     #end _init__
     
     def turn(self, AC):
         damage = 0
-        mainHand = 8
-        if mainHand < self.martialDice:
-            mainHand == self.martialDice
-        damage += self.attack(AC, mainHand)
+        damage += self.attack(AC, self.weapon)
         damage += self.attack(AC, self.martialDice)
         if self.ki > 0:
             damage += self.attack(AC, self.martialDice)
             self.ki -= 1
         if self.level > 4:
-            damage += self.attack(AC, mainHand)
+            damage += self.attack(AC, self.weapon)
         return damage
     #end turn
 #end Monk
@@ -98,18 +101,17 @@ class NewRanger(Character):
 
 #Rogue assumptions:
 #  They are always able to activate sneak attack via hitting targets next to allies
-#  They are dual weilding short swords to maximize damage and # of attacks a turn at d6
 class Rogue(Character):
-    def _init__(self, level, ability):
+    def _init__(self, level, ability, weapon, offHandWeapon):
         self.isSneak = True
         self.numOfSneakDice = ceil(level/2)
-        return super()._init__(level, ability)
+        return super()._init__(self, level, ability, weapon, offHandWeapon)
     #end _init__
     
     def turn(self, AC):
         damage = 0
-        damage += self.attack(AC, 6)
-        damage += self.offHandAttack(AC, 6)
+        damage += self.attack(AC, self.weapon)
+        damage += self.offHandAttack(AC, self.offHandWeapon)
         if damage > 0:
             damage += self.sneakAttack()
         return damage
