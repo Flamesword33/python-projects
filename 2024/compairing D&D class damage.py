@@ -8,3 +8,19 @@
 """
 
 
+from math import ceil
+from random import randint
+
+class Character:
+    def _init__(self, level, ability):
+        self.level = level
+        self.ability = ability
+        self.proficency = ceil(level/4) + 1
+class Monk(Character):
+    def _init__(self, level, ability):
+        self.ki = level
+class Rogue(Character):
+    def _init__(self, level, ability):
+        self.isSneak = True
+        self.numOfSneakDice = ceil(level/2)
+        return super()._init__(level, ability)
