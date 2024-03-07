@@ -16,6 +16,14 @@ class Character:
         self.level = level
         self.ability = ability
         self.proficency = ceil(level/4) + 1
+
+    def attack(self, AC, dmgDice):
+        if (self.roll(20) + self.ability + self.proficency) >= AC:
+            return self.roll(dmgDice) + self.ability
+        
+    def offHandAttack(self, AC, dmgDice):
+        if (self.roll(20) + self.ability + self.proficency) >= AC:
+            return self.roll(dmgDice)
 class Monk(Character):
     def _init__(self, level, ability):
         self.ki = level
