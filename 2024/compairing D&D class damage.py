@@ -54,7 +54,36 @@ class Character:
 #end Character
     
 class Barbarian(Character):
-    pass
+    def _init__(self, level, ability, weapon, offHandWeapon):
+        self.turnCounter = 0
+        if level < 3:
+            self.rage = 2
+        elif level < 6:
+            self.rage = 3
+        elif level < 12:
+            self.rage = 4
+        elif level < 17:
+            self.rage = 5
+        elif level < 20:
+            self.rage = 6
+        else:
+            self.rage = 9000
+
+        if level < 9:
+            self.rageDmg = 2
+        elif level < 16:
+            self.rageDmg = 3
+        else:
+            self.rageDmg = 4
+
+        return super()._init__(level, ability, weapon, offHandWeapon)
+    #end _init__
+
+    def turn(self, AC):
+        self.turnCounter += 1
+        if self.turnCounter == 1:
+            if self.level == 1:
+                self.attack(AC, self.weapon)##############################################  
 
 class Fighter(Character):
     pass
