@@ -25,6 +25,16 @@ class Character:
         self.offHandWeapon = offHandWeapon
         self.proficency = ceil(level/4) + 1
     #end _init__
+        
+    def advantage(self, AC, dmgDice):
+        tempAC = AC - self.ability - self.proficency
+        if self.roll(20) >= tempAC or self.roll(20) >= tempAC:
+            return self.roll(dmgDice) + self.ability
+        
+    def disadvantage(self, AC, dmgDice):
+        tempAC = AC - self.ability - self.proficency
+        if self.roll(20) >= tempAC and self.roll(20) >= tempAC:
+            return self.roll(dmgDice) + self.ability
 
     def attack(self, AC, dmgDice):
         if (self.roll(20) + self.ability + self.proficency) >= AC:
