@@ -13,7 +13,6 @@
       which fighter is tested
 """
 
-
 from math import ceil
 from random import randint
 
@@ -52,7 +51,11 @@ class Character:
         return randint(1, dice)
     #end roll
 #end Character
-    
+
+###############################################################################
+#Barbarian assumptions
+#   all attacks are made reckless if possible
+#   Rage lasts its full time limit
 class Barbarian(Character):
     def _init__(self, level, ability, weapon, offHandWeapon):
         self.turnCounter = 0
@@ -81,9 +84,20 @@ class Barbarian(Character):
 
     def turn(self, AC):
         self.turnCounter += 1
-        if self.turnCounter == 1:
-            if self.level == 1:
-                self.attack(AC, self.weapon)##############################################  
+        if self.turnCounter % 10 == 1:
+            self.rage -= 1
+        else:
+            self.offHandAttack(AC, self.offHandWeapon)
+
+        if self.level > 4:
+            self.advantage(AC, self.weapon)
+            self.advantage(AC, self.weapon)
+        elif self.level > 1:
+            self.advantage(AC, self.weapon)
+        else:
+            self.attack(AC, self.weapon)
+            #########################################################################
+             
 
 class Fighter(Character):
     pass
