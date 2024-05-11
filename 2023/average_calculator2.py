@@ -85,3 +85,10 @@ def drop_lowest(x1=0, x2=0, x3=0, x4=0):
     total = x1+x2+x3+x4
     minimum = min(x1,x2,x3,x4)
     return total - minimum
+
+def stat():
+    return drop_lowest(roll(), roll(), roll(), roll())
+
+def stats():
+    for i in range(6):
+        print(stat())
