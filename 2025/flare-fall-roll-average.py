@@ -29,3 +29,19 @@ class Explosive_Dice:
     def roll(self):
         return randint(1, self.face_count)
     
+    def average_overall(self):
+        '''Finds average roll over x tests'''
+        total = 0
+        for test in range(self.number_of_tests):
+            total = total + self.explosive_roll_total()
+        return total/self.number_of_tests
+    
+    def explosive_roll_total(self):
+        """Rolls a dice and if it hits max value then it rolls again.
+        Returns the sum of all rolls"""
+        roll = self.roll()
+        if roll == self.face_count:
+            return roll + self.explosive_roll_total()
+        else:
+            return roll
+
