@@ -55,3 +55,35 @@ class Explosive_Dice:
                 max = current
         return max
 
+    def frequency_of_multi_roll(self):
+        """Rolls exploding dice and prints off the frequency of how many times the dice exploded"""
+        frequency = [0]*10
+        current_roll = 0
+        for test in range(self.number_of_tests):
+            current_roll = self.explosive_roll_count()
+            if current_roll <= len(frequency):
+                frequency[current_roll-1] += 1
+            else:
+                for x in range(current_roll - len(frequency)):
+                    frequency.append(0)
+                frequency[current_roll-1] += 1
+        self.frequency_print(frequency)
+
+    def explosive_roll_count(self):
+        """Rolls a dice and if it hits max value then it rolls again.
+        Returns number of times the dice was rolled."""
+        counter = 1
+        roll = self.roll()
+        if roll == self.face_count:
+            return counter + self.explosive_roll_count()
+        else:
+            return counter
+        
+    def frequency_print(self, frequency: list):
+        """Formats printing of a frequency list for excel graphing."""
+        for i in range(len(frequency)):
+            print(i+1, " :", frequency[i], end="\n")
+
+        
+    
+
