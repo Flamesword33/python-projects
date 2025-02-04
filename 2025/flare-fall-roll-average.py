@@ -45,3 +45,13 @@ class Explosive_Dice:
         else:
             return roll
 
+    def max_value(self):
+        '''Finds max roll over x tests'''
+        max = 0
+        current = 0
+        for test in range(self.number_of_tests):
+            current = self.explosive_roll_total()
+            if max < current:
+                max = current
+        return max
+
